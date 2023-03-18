@@ -1,3 +1,9 @@
+app:
+  jwt:
+    secret:
+      key: 546A576E5A7234753778217A25432A462D4A614E645267556B58703273357638
+
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -6,7 +12,7 @@ spring:
     password: root026
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
@@ -14,3 +20,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5Dialect
+
+logging:
+  level:
+    com.example.springbootsecurity: debug
